@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascension to Agartha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-layer">
+            <div id="status-bar">
+                Health: <span id="hp">100</span> | 
+                White Monsters: <span id="wm-count">0</span>/10 | 
+                Current Objective: <span id="objective">Disable Fent Reactor</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Dialogue Overlay for Yakub Phase -->
+        <div id="dialogue-box" class="hidden">
+            <p id="dialogue-text"></p>
+            <div id="dialogue-options"></div>
+        </div>
+    </div>
+
+    <script src="entities.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
