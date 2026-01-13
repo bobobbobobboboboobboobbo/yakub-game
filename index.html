@@ -2,29 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ascension to Agartha</title>
+    <title>Yakub's Ascension - FPS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <div id="ui-layer">
-            <div id="status-bar">
-                Health: <span id="hp">100</span> | 
-                White Monsters: <span id="wm-count">0</span>/10 | 
-                Current Objective: <span id="objective">Disable Fent Reactor</span>
-            </div>
-        </div>
-        <canvas id="gameCanvas"></canvas>
-        
-        <!-- Dialogue Overlay for Yakub Phase -->
-        <div id="dialogue-box" class="hidden">
-            <p id="dialogue-text"></p>
-            <div id="dialogue-options"></div>
-        </div>
+    <div id="crosshair">+</div>
+    <div id="ui">
+        <div id="health">HP: 100</div>
+        <div id="objective">Objective: Destroy the Fent Reactor</div>
+        <div id="inventory">White Monsters: 0/10</div>
     </div>
 
-    <script src="entities.js"></script>
-    <script src="game.js"></script>
+    <!-- Dialogue Overlay -->
+    <div id="yakub-overlay" class="hidden">
+        <h1 id="yakub-name">YAKUB</h1>
+        <p id="dialogue-text">"Show me the elixirs of the surface..."</p>
+        <button onclick="tryTrick()">Give White Monsters (Trick Him)</button>
+    </div>
+
+    <div id="instructions">
+        <h1>CLICK TO START</h1>
+        <p>(W,A,S,D to Move | Mouse to Look | Click to Shoot)</p>
+    </div>
+
+    <!-- Load Three.js from CDN -->
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
