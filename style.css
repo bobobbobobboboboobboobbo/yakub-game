@@ -1,0 +1,11 @@
+body { background: #050505; color: #00ff00; font-family: 'Courier New', monospace; overflow: hidden; }
+#game-container { position: relative; width: 800px; height: 600px; margin: 20px auto; border: 3px solid #444; }
+canvas { background: url('https://wallpaperaccess.com/full/1209385.jpg'); background-size: cover; }
+#ui-layer { position: absolute; top: 0; width: 100%; background: rgba(0,0,0,0.7); padding: 10px; }
+.hidden { display: none; }
+#dialogue-box {
+    position: absolute; bottom: 50px; left: 50px; right: 50px;
+    background: rgba(20, 20, 20, 0.9); border: 2px solid #fff; padding: 20px;
+}
+button { background: #222; color: #fff; border: 1px solid #fff; margin: 5px; cursor: pointer; }
+button:hover { background: #fff; color: #000; }
