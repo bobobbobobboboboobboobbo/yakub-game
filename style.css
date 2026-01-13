@@ -1,11 +1,22 @@
-body { background: #050505; color: #00ff00; font-family: 'Courier New', monospace; overflow: hidden; }
-#game-container { position: relative; width: 800px; height: 600px; margin: 20px auto; border: 3px solid #444; }
-canvas { background: url('https://wallpaperaccess.com/full/1209385.jpg'); background-size: cover; }
-#ui-layer { position: absolute; top: 0; width: 100%; background: rgba(0,0,0,0.7); padding: 10px; }
-.hidden { display: none; }
-#dialogue-box {
-    position: absolute; bottom: 50px; left: 50px; right: 50px;
-    background: rgba(20, 20, 20, 0.9); border: 2px solid #fff; padding: 20px;
+body { margin: 0; overflow: hidden; background: #000; font-family: 'Courier New', monospace; }
+#crosshair {
+    position: absolute; top: 50%; left: 50%;
+    color: white; font-size: 24px; transform: translate(-50%, -50%);
+    pointer-events: none;
 }
-button { background: #222; color: #fff; border: 1px solid #fff; margin: 5px; cursor: pointer; }
-button:hover { background: #fff; color: #000; }
+#ui {
+    position: absolute; top: 20px; left: 20px;
+    color: #00ff00; text-shadow: 2px 2px #000;
+}
+#instructions {
+    position: absolute; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8); color: white;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    cursor: pointer;
+}
+.hidden { display: none !important; }
+#yakub-overlay {
+    position: absolute; top: 30%; left: 25%; width: 50%;
+    background: rgba(20, 0, 40, 0.9); border: 2px solid white;
+    color: white; padding: 20px; text-align: center;
+}
